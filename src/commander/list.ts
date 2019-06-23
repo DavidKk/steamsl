@@ -25,6 +25,11 @@ const action = async (options: Options = DefaultOptions) => {
   }
 
   const archiveFolder = path.join(options.archiveFolder, userdata.id)
+  if (!fs.existsSync(archiveFolder)) {
+    console.log(chalk.red.bold(`Can not found any files of user ${userdata.id}`))
+    return
+  }
+
   const archives = await fs.readdir(archiveFolder)
   if (archives.length === 0) {
     console.log(chalk.red.bold(`Can not found any files of user ${userdata.id}`))
