@@ -30,14 +30,27 @@ const action = async (options: Options = DefaultOptions) => {
     return
   }
 
-  await fs.remove(archiveFolder)
-  console.log(chalk.green.bold(`Archives of ${userdata.nickanme} have been removed successfully`))
+  let archive = null
+  if (options.filename) {
+    const file = path.join(archiveFolder, `${options.filename}.zip`)
+    archive = { file }
+
+    !fs.existsSync(file) && console.log(chalk.red.bold(`Archive ${archive} is not exists`))
+  }
+
+  if (!archive) {
+    archive = await selectArchive(archiveFolder)
+  }
+
+  await fs.remove(archive.file)
+  console.log(chalk.green.bold(`Archive has been deleted successfully`))
 }
 
 program
-.command('clear')
-.description('clear all archives of user')
+.command('remove')
+.description('remove archive')
 .option('-s, --steam-folder <steamFolder>', `archive folder in steam, default: ${DefaultOptions.steamFolder}`)
 .option('-u, --steam-user-id <steamUserId>', `set user id`)
 .option('-a, --archive-folder <archiveFolder>', `storage archive folder, default: ${DefaultOptions.archiveFolder}`)
+.option('-f, --filename <filename>', `set archive file`)
 .action(action)
