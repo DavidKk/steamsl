@@ -20,6 +20,7 @@
     "lint": "npm run tslint",
     "test": "npm run lint",
     "develop": "tsc --project ./src --outDir ./libs --watch",
+    "release": "tsc --project ./src --outDir ./libs",
     "start": "npm run develop"
   },
   "devDependencies": {
