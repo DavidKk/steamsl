@@ -2,7 +2,7 @@
 
 # Steam SL
 
-Private use
+Private use (only test on mac osx)
 
 ## Install
 
