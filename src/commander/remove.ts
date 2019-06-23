@@ -4,7 +4,7 @@ import chalk from 'chalk'
 import defaultsDeep from 'lodash/defaultsDeep'
 import program from 'commander'
 import * as DefaultOptions from '../options'
-import { findSteamUsers, unzip as uncompress } from '../share/files'
+import { findSteamUsers } from '../share/files'
 import { selectUser, selectArchive } from './share'
 import { Options } from '../typings'
 
