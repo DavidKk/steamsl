@@ -1,5 +1,6 @@
 import './commander/save'
 import './commander/load'
+import './commander/list'
 import './commander/remove'
 import './commander/clear'
 import './commander/clearAll'
