@@ -52,7 +52,7 @@ export const zip = (folder: string, relativeTo: string = folder, zipFile: string
 
     const writeStream = fs.createWriteStream(zipFile)
     writeStream.once('error', reject).once('close', resolve)
-  
+
     zip
     .generateNodeStream({ streamFiles: true })
     .pipe(writeStream)
@@ -63,13 +63,13 @@ export const zip = (folder: string, relativeTo: string = folder, zipFile: string
 
 export const unzip = (file: string, folder: string) => {
   const zip = new Zip()
-  
+
   return zip.loadAsync(fs.readFileSync(file)).then((contents) => {
     return Object.keys(contents.files).map((file) => {
       if (!zip.file(file)) {
         return
       }
-  
+
       return zip.file(file).async('nodebuffer').then((content) => {
         file = path.join(folder, file)
 

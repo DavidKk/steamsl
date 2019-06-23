@@ -47,7 +47,7 @@ export const inputArchive = (defaultFile: string) => {
     message: 'Please enter a archive name.',
     default: defaultFile
   }
-  
+
   return prompt(promptOptions).then((result) => {
     const archive = result.archive
     return `${archive || defaultFile}.zip`
