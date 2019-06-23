@@ -1,5 +1,6 @@
 import './commander/save'
 import './commander/load'
+import './commander/clear'
 import * as fs from 'fs-extra'
 import * as path from 'path'
 import program from 'commander'

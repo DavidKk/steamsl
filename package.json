@@ -1,6 +1,6 @@
 {
   "name": "steamsl",
-  "version": "0.0.1-alpha.1.0",
+  "version": "0.1.0-alpha.0.1",
   "author": "DavidJones <qowera@qq.com>",
   "main": "./libs/index.js",
   "bin": "./bin/cli",
