@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/DavidKk/steamsl.svg?branch=master)](https://travis-ci.org/DavidKk/steamsl)
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/DavidKk/dosgame/blob/master/LICENSE)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/DavidKk/steamsl/blob/master/LICENSE)
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
 
